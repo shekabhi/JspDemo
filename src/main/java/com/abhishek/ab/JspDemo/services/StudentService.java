@@ -7,5 +7,5 @@ import java.util.Optional;
 public interface StudentService {
 
     public Iterable<Student> findAll() ;
-    public Optional<Student> findById(int id) ;
+    public Student studentbyid(int id) ;
 }

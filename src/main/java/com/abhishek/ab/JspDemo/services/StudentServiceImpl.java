@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Optional;
 
 @Transactional
 @Service("studentService")
@@ -20,7 +19,7 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findAll();
     }
 
-    public Optional<Student> findById(int id) {
-        return studentRepository.findById(id);
+    public Student studentbyid(int id) {
+        return studentRepository.findById(id).orElse(null);
     }
 }
