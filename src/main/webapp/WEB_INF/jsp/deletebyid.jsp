@@ -5,9 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Page</title>
+ <link href="css/home.css" rel="stylesheet">
 </head>
 <body>
 
+  <div align="center"  >
 	<h1>Delete Student By ID</h1>
 	<form name="myForm" action="/deleteid" >
 	    <table border="1">
@@ -18,11 +20,14 @@
 	            </tr>
 	        </tbody>
 	     </table>
-	     <br>
-	    <input type="submit" value="submit" name="submit" /><br>
-	    <input type="reset" value="Rest" name="reset" />
+         <br>
+	     <div>
+         	   <button class="button"  type="submit"  value="Submit">Submit</button>
+         	   <button class="button1"  type="reset"  value="Reset">Rest</button>
+         </div>
 	 </form>
 
+  </div>
 
 </body>
 </html>

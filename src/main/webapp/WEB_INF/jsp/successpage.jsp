@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student List</title>
+<title>Success Page</title>
+ <link href="css/success.css" rel="stylesheet">
 </head>
 <body>
 
-    <div align="center">
+    <div align="center" >
         <form action="/" method="get" >
-                    <button type="submit"  value="Submit">Home</button>
+                    <button class="button" type="submit"  value="Submit">Home</button>
         </form>
 
             <h1> Submited Successfully </h1>

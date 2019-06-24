@@ -24,26 +24,13 @@ public class StudentController {
     @Autowired
     private StudentService studentService  ;
 
-    @GetMapping(value = "/students")
-    public  String index(ModelMap modelMap){
+    @GetMapping(value = "/")
+    public  String AllStudent(ModelMap modelMap){
         modelMap.put("students" , studentService.findAll());
-        System.out.println(" Student for id =" + studentService.findAll());
-        return "index" ;
+        //System.out.println(" Student for id =" + studentService.findAll());
+        return "home" ;
     }
 
-    @GetMapping(value = "/studentid")
-    public String studentdetailed(@RequestParam("id") int id , Map<String , Object> map) {
-
-        map.put("students" , studentService.studentbyid(id)) ;
-        System.out.println(" Student for id =" + studentService.studentbyid(id));
-
-        return "studentbyid" ;
-    }
-
-    @GetMapping(value = "/student")
-    public String databyid(){
-        return "student" ;
-    }
 
     @GetMapping(value = "/delete")
     public String deletebyid(){
@@ -53,9 +40,9 @@ public class StudentController {
     public String deleteid(@RequestParam("id") int id ) {
 
         studentService.deletebyid(id) ;
-        System.out.println("Deleted Student for id =" + studentService.studentbyid(id));
+        //System.out.println("Deleted Student for id =" + studentService.studentbyid(id));
 
-        return "delete" ;
+        return "successpage" ;
     }
 
     @PostMapping(value = "/insert")
@@ -78,9 +65,16 @@ public class StudentController {
         student.setMobileNumber(mobileNumber);
 
         studentService.insertStudent(student);
+        //System.out.println("Student Detail" + student);
 
-        System.out.println("Student Detail" + student);
-
-        return "insert" ;
+        return "successpage" ;
     }
+
+    @GetMapping (value = "/update")
+    public String editpage(){
+
+        return "edit" ;
+    }
+
+
 }

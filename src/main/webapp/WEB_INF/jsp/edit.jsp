@@ -53,7 +53,7 @@
 	     </table>
 	     <br>
 	     <div>
-	             <button class="button"  type="submit"  value="Submit">Submit</button>
+	             <button class="button"  type="submit"  value="Submit">Update</button>
 	              <button class="button1"  type="reset"  value="Reset">Rest</button>
 	     </div>
 
