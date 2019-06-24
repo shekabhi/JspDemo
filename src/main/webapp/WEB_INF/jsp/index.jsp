@@ -7,7 +7,10 @@
 <title>Student List</title>
 </head>
 <body>
-
+    <form action="/" method="get" >
+            <button type="submit"  value="Submit">Home</button>
+    </form>
+     <p></p>
 	<h3>Student List</h3>
 	<table border="1" cellpadding="2" cellspacing="2">
 		<tr>

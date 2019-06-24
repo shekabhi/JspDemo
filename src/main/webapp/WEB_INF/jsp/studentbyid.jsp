@@ -8,6 +8,10 @@
 </head>
 <body>
 
+    <form action="/" method="get" >
+            <button type="submit"  value="Submit">Home</button>
+    </form>
+    <p></p>
 
 	<table border="1" cellpadding="2" cellspacing="2">
 		<tr>

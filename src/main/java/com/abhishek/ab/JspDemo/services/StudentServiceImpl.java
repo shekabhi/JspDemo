@@ -22,4 +22,15 @@ public class StudentServiceImpl implements StudentService {
     public Student studentbyid(int id) {
         return studentRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public void deletebyid(int id) {
+        studentRepository.deleteById(id); ;
+        System.out.println("Deleted Successfully");
+    }
+
+    @Override
+    public void insertStudent(Student student) {
+        studentRepository.save(student);
+    }
 }
