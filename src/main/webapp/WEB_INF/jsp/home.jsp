@@ -9,7 +9,7 @@
 </head>
 <body>
     <div align="center">
-        <h1>Welcome To Home Page</h>
+        <h1 style="margin-top:60px;">Welcome To Home Page</h1>
         <p></p>
         <div>
 
@@ -35,7 +35,7 @@
         			<th>MobileNumber</th>
         			<th>Actions</th>
         		</tr>
-        		<c:forEach var="student" items="${students }">
+        		< c:forEach var="student" items="${students }">
         			<tr>
         				<td>${student.id }</td>
         				<td>${student.firstName }</td>
@@ -43,7 +43,19 @@
         				<td>${student.branch}</td>
         				<td>${student.year }</td>
         				<td>${student.mobileNumber }</td>
-        				<td><a href="/update">Edit</a></td>
+						<td><h5>
+							<a href="<c:url value='/update'>
+							< c:param name='id' value='${student.id}' />
+							< c:param name='firstName' value='${student.firstName}' />
+							< c:param name='lastName' value='${student.lastName}' />
+							< c:param name='branch' value='${student.branch}' />
+							< c:param name='year' value='${student.year}' />
+							< c:param name='mobileNumber' value='${student.mobileNumber}' />
+							</c:url>
+							">Edit</a>
+						</h5>
+						</td>
+
         			</tr>
         		</c:forEach>
         	</table>

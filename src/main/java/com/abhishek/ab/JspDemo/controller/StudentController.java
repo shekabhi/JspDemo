@@ -71,10 +71,24 @@ public class StudentController {
     }
 
     @GetMapping (value = "/update")
-    public String editpage(){
+    public String editpage(@RequestParam("id") int id , @RequestParam("firstName") String firstName,
+                           @RequestParam("lastName") String lastName, @RequestParam("branch") String branch,
+                           @RequestParam("year") int year, @RequestParam("mobileNumber") String mobileNumber){
+
+        System.out.println("id -> " + id);
+        System.out.println("firstName -> " + firstName);
+        System.out.println("lastName -> " + lastName);
+        System.out.println("branch -> " + branch);
+        System.out.println("year -> " + year);
+        System.out.println("mobileNumber -> " + mobileNumber);
+
+        int newId = id ;
 
         return "edit" ;
     }
+
+
+
 
 
 }
