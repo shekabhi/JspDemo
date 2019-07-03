@@ -25,7 +25,13 @@ public class StudentController {
     private StudentService studentService  ;
 
     @GetMapping(value = "/")
-    public  String AllStudent(ModelMap modelMap){
+        public String welcomePage(){
+            return "welcomepage" ;
+        }
+
+
+    @GetMapping(value = "/admin")
+    public  String adminPage(ModelMap modelMap){
         modelMap.put("students" , studentService.findAll());
         //System.out.println(" Student for id =" + studentService.findAll());
         return "home" ;
@@ -45,7 +51,7 @@ public class StudentController {
         return "successpage" ;
     }
 
-    @PostMapping(value = "/insert")
+    @GetMapping(value = "/insert")
     public String insertpage(){
         return "insertstudent" ;
     }
@@ -75,14 +81,6 @@ public class StudentController {
                            @RequestParam("lastName") String lastName, @RequestParam("branch") String branch,
                            @RequestParam("year") int year, @RequestParam("mobileNumber") String mobileNumber){
 
-        System.out.println("id -> " + id);
-        System.out.println("firstName -> " + firstName);
-        System.out.println("lastName -> " + lastName);
-        System.out.println("branch -> " + branch);
-        System.out.println("year -> " + year);
-        System.out.println("mobileNumber -> " + mobileNumber);
-
-        int newId = id ;
 
         return "edit" ;
     }
