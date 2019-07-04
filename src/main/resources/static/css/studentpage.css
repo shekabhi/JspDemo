@@ -1,0 +1,13 @@
+img{
+     width:200px;
+     height:200px;
+     display: block;
+      margin : 40px auto ;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

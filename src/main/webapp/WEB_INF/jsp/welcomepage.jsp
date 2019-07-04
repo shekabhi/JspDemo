@@ -12,7 +12,7 @@ pageEncoding="ISO-8859-1"%>
 <body>
 
 <div class="container">
-    <div calss=" container img">
+    <div class=" container img">
         <img src="/images/adminimg.png">
     </div>
 
@@ -27,7 +27,7 @@ pageEncoding="ISO-8859-1"%>
             </div>
             <div class="col-sm-6 col text-center">
                 <div class="container">
-                    <button type="button" class="btn btn-outline-dark">STUDENT</button>
+                 <a href="/student"><button type="button" class="btn btn-outline-dark">STUDENT</button></a>
                 </div>
 
             </div>

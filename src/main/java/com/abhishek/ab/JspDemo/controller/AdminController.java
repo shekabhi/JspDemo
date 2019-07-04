@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @Controller
-public class StudentController {
+public class AdminController {
 
     @Autowired
     private StudentService studentService  ;
